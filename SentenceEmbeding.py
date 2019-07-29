@@ -1,9 +1,5 @@
-from gensim.scripts.glove2word2vec import glove2word2vec
+from SIF import data_io, params, SIF_embedding
 glove_file = 'vectors.txt'
-tmp_file = 'glove_2_wordvec.txt'
-glove2word2vec(glove_file, tmp_file)
-model = KeyedVectors.load_word2vec_format('glove_2_wordvec.txt')
-
 
 word_freauency_path = 'vocab.txt'
 weight_params = 1e-3 # the parameter in the SIF weighting scheme, usually in the range [3e-5, 3e-3]
